@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Fibras PET</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Fibras PET</h1>
+    <p class="intro">
+      Esta calculadora te ayuda a entender cómo la adición de fibras PET (plástico reciclado) afecta la resistencia y el costo de los materiales de construcción. Solo tienes que introducir el porcentaje de fibras PET que deseas usar en la mezcla.
+    </p>
+    <div class="input-container">
+      <label for="percentageInput">Porcentaje de Fibras PET:</label>
+      <input type="number" id="percentageInput" min="0" max="100" step="0.1" placeholder="Introduce el porcentaje de fibras PET">
+      <span id="percentageError" class="error-message"></span>
+    </div>
+    <button onclick="calculate()">Calcular</button>
+    <div id="results">
+      <p><strong>Resistencia a la compresión:</strong> <span id="compressionResult"></span></p>
+      <p class="description">La resistencia a la compresión mide cuánto puede soportar el material antes de aplastarse.</p>
+      <p><strong>Resistencia a la flexión:</strong> <span id="flexionResult"></span></p>
+      <p class="description">La resistencia a la flexión mide cuánto puede doblarse el material antes de romperse.</p>
+      <p><strong>Espesor de la losa:</strong> <span id="thicknessResult"></span></p>
+      <p class="description">El espesor de la losa es la altura de la capa de material.</p>
+      <p><strong>Costo por metro lineal:</strong> <span id="costResult"></span></p>
+      <p class="description">El costo por metro lineal es el precio para construir un metro de la losa.</p>
+    </div>
+    <div id="chartContainer">
+      <canvas id="concreteChart" width="200" height="400"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
